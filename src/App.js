@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import LayoutMain from './components/layout/LayoutMain';
+import { ResetStyle,GlobalStyle } from './components/common/globalStyle';
+import Header from './components/section/Header';
+import MainPage from './components/pages/MainPage';
+import {ImgContext,Images} from './components/context/ImgContext';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ResetStyle />
+      <GlobalStyle />
+      <Header />
+      <LayoutMain>
+        <ImgContext.Provider value={Images}>
+          <MainPage />
+        </ImgContext.Provider>
+      </LayoutMain>
     </div>
   );
 }
