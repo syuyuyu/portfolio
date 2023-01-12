@@ -13,23 +13,12 @@ const StyleContainer = styled.div`
   :hover{
     transform:translate(0px,-2px);
   }
-  @media (min-width: 576px) {
-    /* width: 560px; */
-  }
+
   @media (min-width: 768px) {
-    /* width: 750px; */
     height: 40px;
     width: 40px;
-    
   }
-  @media (min-width: 992px) {
-    /* width: 980px; */
-    
-  }
-  @media (min-width: 1200px) {
-    /* width: 1140px; */
 
-  }
 
 `
 

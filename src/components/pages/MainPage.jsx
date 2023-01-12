@@ -2,8 +2,6 @@ import styled from 'styled-components'
 import { useContext } from 'react'
 import { ImgContext } from '../context/ImgContext'
 import MainCardList from '../section/MainCardList'
-import ImgItem from '../ImgItem'
-import Main01 from '../../../src/assets/imgs/01.png'
 import ImgMain from '../ImgMain'
 
 

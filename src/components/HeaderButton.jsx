@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import { useNavigate } from "react-router-dom";
+
 
 const StyleContainer = styled.div`
   display: flex;
@@ -23,10 +25,12 @@ const Button = styled.div`
 
 
 
-const HeaderButton = ({name}) =>{
+const HeaderButton = ({name,linkTo}) =>{
+  const navigate = useNavigate();
+
   return(
     <>
-      <StyleContainer>
+      <StyleContainer onClick={()=>navigate(`${linkTo}`)}>
         <Button>
         <StyleBackground>
           <h5>{name}</h5>
