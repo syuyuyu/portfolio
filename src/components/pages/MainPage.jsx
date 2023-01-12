@@ -4,6 +4,7 @@ import { ImgContext } from '../context/ImgContext'
 import MainCardList from '../section/MainCardList'
 import ImgItem from '../ImgItem'
 import Main01 from '../../../src/assets/imgs/01.png'
+import ImgMain from '../ImgMain'
 
 
 const Container = styled.div`
@@ -24,9 +25,7 @@ const MainPage =()=>{
     <>
     <Container>
       <ImgContainer>
-        {/* <ImgItem url={images.main}></ImgItem> */}
-        <ImgItem></ImgItem>
-        {/* <ImgItem url={images.main03}></ImgItem> */}
+        <ImgMain url={images.main}></ImgMain>
       </ImgContainer>
       <MainCardList />
     </Container>

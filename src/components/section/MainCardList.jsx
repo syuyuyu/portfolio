@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { useContext } from 'react'
 import { ImgContext } from '../context/ImgContext'
+import CardItem from "../CardItem";
 
 const CardContainer = styled.div`
   width: 100%;
@@ -19,15 +20,7 @@ const CardList = styled.div`
     grid-template-columns: repeat(2,minmax(150px,550px));
   }
 `
-const CardItem = styled.div`
-  border: 2px solid grey;
-  height: 200px;
-  border-radius: 10px;
 
-  @media (min-width: 768px) {
-    height: 260px;
-  }
-`
 
 const MainCardList = ()=>{
   const images = useContext(ImgContext)
@@ -37,9 +30,9 @@ const MainCardList = ()=>{
       <CardContainer>
         <CardList>
           <CardItem url={images.illustration}/>
-          <CardItem />
-          <CardItem />
-          <CardItem />
+          <CardItem url={images.watercolor}/>
+          <CardItem url={images.digitizer}/>
+          <CardItem url={images.stickers}/>
         </CardList>
       </CardContainer>
     </>
