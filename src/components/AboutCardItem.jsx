@@ -6,16 +6,17 @@ const CardItemContainer = styled.div`
   border: 2px solid grey;
   height: 200px;
   border-radius: 10px;
+  margin: 10px 0;
   
   @media (min-width: 768px) {
-    height: 260px;
+    min-height: 400px;
   }
 `
 
 const Info =styled.div``
 
 
-const CardItem = ({url})=>{
+const AboutCardItem = ({url})=>{
 
   return (
     <>
@@ -27,4 +28,4 @@ const CardItem = ({url})=>{
   )
 }
 
-export default CardItem;
+export default AboutCardItem;

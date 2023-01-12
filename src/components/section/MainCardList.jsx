@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useContext } from 'react'
 import { ImgContext } from '../context/ImgContext'
-import CardItem from "../CardItem";
+import MainCardItem from "../MainCardItem";
 
 const CardContainer = styled.div`
   width: 100%;
@@ -29,10 +29,10 @@ const MainCardList = ()=>{
     <>
       <CardContainer>
         <CardList>
-          <CardItem url={images.illustration}/>
-          <CardItem url={images.watercolor}/>
-          <CardItem url={images.digitizer}/>
-          <CardItem url={images.stickers}/>
+          <MainCardItem url={images.illustration}/>
+          <MainCardItem url={images.watercolor}/>
+          <MainCardItem url={images.digitizer}/>
+          <MainCardItem url={images.stickers}/>
         </CardList>
       </CardContainer>
     </>
