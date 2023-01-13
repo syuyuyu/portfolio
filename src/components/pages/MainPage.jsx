@@ -8,26 +8,42 @@ import ImgMain from '../ImgMain'
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 1rem;
+  padding: 0 .5rem;
+  height: 100%;
   `
 const ImgContainer = styled.div`
-background-color: var(--color-dark80);
+  background-color: var(--color-dark80);
   width: 100%;
   height: auto;
-  margin: 1rem 0px;
+  margin: 1rem 0 .3rem 0;
   max-height: 500px;
   display: flex;
   justify-content: center;
   position: relative;
-  margin-bottom: 500px; //暫用margin把MainCardList往下移
-  box-shadow: 5px 6px 4px -1px #9DA4AD;
+  .mainPng{
+    display: none;
+  }
+  .main{
+    display: block;
+  }
+  @media (min-width: 992px) {
+    margin-bottom:510px ;
+    
+    .mainPng{
+      display: block;
+    }
+    .main{
+      display: none;
+    }
+    
+  }
 
 `
 
 
 const MainPage =()=>{
   const images = useContext(ImgContext)
-  const imgs = document.querySelectorAll('.main') //取得全部的圖片
+  const imgs = document.querySelectorAll('.mainPng') //取得全部的圖片
   
 
   const handleMouseMove=(e)=>{
@@ -47,9 +63,10 @@ const MainPage =()=>{
     <>
     <Container>
       <ImgContainer onMouseMove={(e)=>handleMouseMove(e)}>
-        <ImgMain url={images.main01} className='main'></ImgMain>
-        <ImgMain url={images.main02} className='main'></ImgMain>
-        <ImgMain url={images.main03} className='main'></ImgMain>
+        <ImgMain url={images.main} className='main'></ImgMain>
+        <ImgMain url={images.main01} className='mainPng'></ImgMain>
+        <ImgMain url={images.main02} className='mainPng'></ImgMain>
+        <ImgMain url={images.main03} className='mainPng'></ImgMain>
       </ImgContainer>
       <MainCardList />
     </Container>
