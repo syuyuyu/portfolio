@@ -8,6 +8,8 @@ const ImgContainer =styled.img`
   background-repeat: no-repeat;
   object-fit: cover;
   position: relative;
+  top: 0;
+  left: 0;
   transform: translateX(var(--offset));
   filter: blur(var(--blur));
 
@@ -16,14 +18,12 @@ const ImgContainer =styled.img`
   }
   @media (min-width: 992px) {
     position: absolute;
-    top: 0;
-    left: 0;
   }
 
 
 `
-const ImgMain = ({url,className})=>{
-  return<ImgContainer src={url} className={className}></ImgContainer>
+const ImgMain = ({url,name})=>{
+  return<ImgContainer src={url} className={name}></ImgContainer>
 }
 
 export default ImgMain;
