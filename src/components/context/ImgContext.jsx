@@ -1,10 +1,10 @@
 import { createContext} from 'react';
 
 export const Images = {
-  main:'https://i.imgur.com/sMc7MQZ.jpg',
-  main01:'https://i.imgur.com/exSsBZZ.jpg',
-  main02:'https://i.imgur.com/MkE54Bp.jpg',
-  main03:'https://i.imgur.com/1jGGSFC.png',
+  main:'https://i.imgur.com/UVwKBEb.png',
+  main01:'https://i.imgur.com/uvZnyle.png',
+  main02:'https://i.imgur.com/UXArF1m.png',
+  main03:'https://i.imgur.com/lVxQhRE.png',
   illustration:'https://i.imgur.com/A2Dgtus.png',
   watercolor:'https://i.imgur.com/4lCTJQZ.png',
   digitizer:'https://i.imgur.com/C0sG1rM.png',

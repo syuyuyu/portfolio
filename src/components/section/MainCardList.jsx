@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useContext } from 'react'
 import { ImgContext } from '../context/ImgContext'
-import MainCardItem from "../MainCardItem";
+import MainCardItem from "../items/MainCardItem";
 
 const CardContainer = styled.div`
   width: 100%;

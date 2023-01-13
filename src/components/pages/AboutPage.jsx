@@ -1,9 +1,7 @@
 import { useContext } from 'react'
 import { ImgContext } from '../context/ImgContext'
 import styled from 'styled-components'
-import MainCardList from '../section/MainCardList'
-import ImgItem from '../ImgItem'
-import AboutCardItem from '../section/AboutCardItem'
+import AboutCardItem from '../items/AboutCardItem'
 
 
 const AboutContainer = styled.div`

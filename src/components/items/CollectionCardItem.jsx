@@ -1,22 +1,21 @@
-import ImgItem from "../ImgItem";
 import styled from "styled-components";
-
+import ImgItem from "./ImgItem";
 
 const CardItemContainer = styled.div`
-  border: 2px solid grey;
-  height: 200px;
-  border-radius: 10px;
-  margin: 10px 0;
+  border: 1px solid grey;
+  height: 260px;
+  border-radius: 5px;
+  /* margin: 3px 0; */
   
   @media (min-width: 768px) {
-    min-height: 400px;
+    min-height: 370px;
   }
 `
 
 const Info =styled.div``
 
 
-const AboutCardItem = ({url})=>{
+const CollectionCardItem = ({url})=>{
 
   return (
     <>
@@ -28,4 +27,4 @@ const AboutCardItem = ({url})=>{
   )
 }
 
-export default AboutCardItem;
+export default CollectionCardItem;

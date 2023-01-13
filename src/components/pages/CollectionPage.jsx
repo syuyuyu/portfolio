@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { ImgContext } from '../context/ImgContext'
 import styled from 'styled-components'
-import CollectionCardItem from '../section/CollectionCardItem'
+import CollectionCardItem from '../items/CollectionCardItem'
 
 
 const CollectionContainer = styled.div`

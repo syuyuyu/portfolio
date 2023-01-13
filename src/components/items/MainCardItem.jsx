@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 
 const CardItemContainer = styled.div`
-  border: 2px solid grey;
+  border: 1px solid grey;
   height: 200px;
-  border-radius: 10px;
+  border-radius: 5px;
   
   @media (min-width: 768px) {
     height: 260px;
