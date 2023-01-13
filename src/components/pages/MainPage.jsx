@@ -12,7 +12,6 @@ const Container = styled.div`
   height: 100%;
   `
 const ImgContainer = styled.div`
-  background-color: var(--color-dark80);
   width: 100%;
   height: auto;
   margin: 1rem 0 .3rem 0;
@@ -20,6 +19,17 @@ const ImgContainer = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
+  h1{
+    position: absolute;
+    z-index: 1;
+    color: white;
+    top:50%;
+    transform: translateY(-50%);
+    text-shadow: 3px 3px 3px var(--color-dark80);
+    @media (min-width: 992px) {
+      transform: translateY(300%);
+    }
+  }
  
   .main{
     display: block;
@@ -39,7 +49,6 @@ const ImgContainer = styled.div`
 
 `
 
-
 const MainPage =()=>{
   const images = useContext(ImgContext)
   const imgs = document.querySelectorAll('.mainPng') //取得全部的圖片
@@ -48,7 +57,6 @@ const MainPage =()=>{
   const handleMouseMove=(e)=>{
     let percentage = e.clientX / window.outerWidth; //螢幕左到右的值
     setPointMove(percentage)
-    console.log(percentage)
     let offset = 5*percentage; //定義分層圖片位置的距離
     let blur = 15; //模糊度 預設為20
     for(let [index,img] of imgs.entries()){ //將offset,blur發送給每個img
@@ -68,6 +76,7 @@ const MainPage =()=>{
     <>
     <Container>
       <ImgContainer onMouseMove={(e)=>handleMouseMove(e)}>
+        <h1>-Welcome-</h1>
         <ImgMain url={images.main} name='main'></ImgMain>
         <ImgMain url={images.main01} name='mainPng'></ImgMain>
         <ImgMain url={images.main02} name='mainPng'></ImgMain>
