@@ -8,12 +8,14 @@ import ImgMain from '../ImgMain'
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 2rem;
-`
+  padding: 0 1rem;
+  `
 const ImgContainer = styled.div`
-  width: 100%;
+  width: 110%;
   margin: 1rem 0px;
   max-height: 500px;
+  display: flex;
+  justify-content: center;
 `
 
 

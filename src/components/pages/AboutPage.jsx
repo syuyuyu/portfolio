@@ -3,7 +3,7 @@ import { ImgContext } from '../context/ImgContext'
 import styled from 'styled-components'
 import MainCardList from '../section/MainCardList'
 import ImgItem from '../ImgItem'
-import AboutCardItem from '../AboutCardItem'
+import AboutCardItem from '../section/AboutCardItem'
 
 
 const AboutContainer = styled.div`
@@ -13,9 +13,6 @@ const AboutContainer = styled.div`
 `
 const AboutCardList = styled.div`
 `
-
-// const AboutCardItem = styled.div``
-
 
 const AboutPage = ()=>{
   const images = useContext(ImgContext)

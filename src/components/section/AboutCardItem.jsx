@@ -1,4 +1,4 @@
-import ImgItem from "./ImgItem";
+import ImgItem from "../ImgItem";
 import styled from "styled-components";
 
 
