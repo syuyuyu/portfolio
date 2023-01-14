@@ -5,11 +5,17 @@ import AboutCardItem from '../items/AboutCardItem'
 
 
 const AboutContainer = styled.div`
-  display: flex;
-  flex-direction: column;
   padding: 0 2rem;
+  margin: 0 auto;
+  width: 100%;
 `
 const AboutCardList = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px auto 5px auto;
+  min-width: 200px;
+
 `
 
 const AboutPage = ()=>{
@@ -19,10 +25,10 @@ const AboutPage = ()=>{
     <>
     <AboutContainer>
       <AboutCardList>
-          <AboutCardItem url={images.illustration}/>
-          <AboutCardItem url={images.watercolor}/>
-          <AboutCardItem url={images.digitizer}/>
-          <AboutCardItem url={images.stickers}/>
+          <AboutCardItem url={images.illustration} name='插畫'/>
+          <AboutCardItem url={images.watercolor} name='水彩'/>
+          <AboutCardItem url={images.digitizer} name='電繪'/>
+          <AboutCardItem url={images.stickers} name='貼圖'/>
       </AboutCardList>
     </AboutContainer>
     </>

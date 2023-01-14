@@ -8,12 +8,11 @@ const CardItemContainer = styled.div`
   border-radius: 5px;
   position:relative;
 
+
   :hover .backgroundCover{
-    /* display: none; */
-    -webkit-animation: fadeOutFromNone 0.5s ease-out;
-    -moz-animation: fadeOutFromNone 0.5s ease-out;
-    -o-animation: fadeOutFromNone 0.5s ease-out;
-    animation: fadeOutFromNone 0.5s ease-out;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s .15s, opacity .15s linear;
   }
   
   @media (min-width: 768px) {
@@ -32,6 +31,9 @@ const BackgroundCover = styled.div`
   justify-content: center;
   align-items: center;
   color: var(--color-white);
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .12s linear;
 `
 
 
