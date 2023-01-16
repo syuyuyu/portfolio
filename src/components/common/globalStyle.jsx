@@ -3,8 +3,6 @@ import instagram from "../../../src/assets/icons/instagram.svg"
 import line from "../../../src/assets/icons/line.svg"
 // import "@fontsource/montserrat"; // 數字字型 Defaults to weight 400.
 // import "@fontsource/noto-sans-tc"; //中英文字型 Defaults to weight 400.
-// import imgMain from 'http://i.imgur.com/sMc7MQZ.jpg';
-// [url=https://imgur.com/sMc7MQZ][img]http://i.imgur.com/sMc7MQZ.jpg[/img][/url]
 
 export const ResetStyle = createGlobalStyle`
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -91,6 +89,7 @@ export const GlobalStyle = createGlobalStyle`
   --color-warm:#fff3e4;
   --svg-instagram: url(${instagram});
   --svg-line: url(${line});
+  --progress: 0;
 }
 
 

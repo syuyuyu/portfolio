@@ -8,6 +8,7 @@ import AboutPage from './components/pages/AboutPage'
 import {ImgContext,Images} from './components/context/ImgContext';
 
 function App() {
+
   return (
     <div className="App">
       <ResetStyle />

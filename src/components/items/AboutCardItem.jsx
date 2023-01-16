@@ -12,8 +12,14 @@ const CardItemContainer = styled.div`
   max-width: 700px;
   width: 100%;
   display: flex;
-
-
+  
+  transform: scale(calc(1.8 - (0.8 * var(--progress)))) translateY(calc(-60px * (1 - var(--progress))));
+  opacity: var(--progress);
+  /* transition: .25s transform ease-in-out; */
+  :hover{
+    /* transform: scale(1.8) translateY(-60px);
+    opacity: 0; */
+  }
 
   @media (min-width: 768px) {
     min-height: 200px;
@@ -33,17 +39,16 @@ const Info = styled.div`
   background: linear-gradient(90deg,rgba(225, 147, 1, 0.8),rgba(255, 255, 255, 0.5));
 `
 
-const AboutCardItem = ({url,name})=>{
+const AboutCardItem = ({url,name,type})=>{
 
   return (
     <>
-    <CardItemContainer>
+    <CardItemContainer className={name}>
       <Imgbox>
         <ImgItem url={url}></ImgItem>
       </Imgbox>
       <Info>
-        <h3>{name}</h3>
-        <p>adfasf</p>
+        <h2>{type}</h2>
       </Info>
     </CardItemContainer>
     </>
