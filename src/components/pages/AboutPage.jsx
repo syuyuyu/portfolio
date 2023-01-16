@@ -2,7 +2,6 @@ import { useContext,useEffect,useState } from 'react'
 import { ImgContext } from '../context/ImgContext'
 import styled from 'styled-components'
 import AboutCardItem from '../items/AboutCardItem'
-import { cleanup } from '@testing-library/react'
 
 
 const AboutContainer = styled.div`
@@ -55,7 +54,7 @@ const AboutPage = ()=>{
           let end = total * (index + 1)        
           let progress = (scrolled - start) / (end - start)
           if (progress >= 1) progress = 1
-          if (progress <= 0) progress = 0
+          if (progress <= 0.5) progress = 0
           item.style.setProperty('--progress', progress)
         }
     // })
@@ -64,6 +63,7 @@ const AboutPage = ()=>{
     window.addEventListener('scroll', handleScroll);
     return()=>{
       window.removeEventListener('scroll', handleScroll);
+      setScrollTop(window.scrollY);
     }
   },[html.clientHeight, html.scrollHeight, html.scrollTop, items,scrollTop])
 
