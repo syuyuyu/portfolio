@@ -2,6 +2,7 @@ import { useContext,useEffect,useState } from 'react'
 import { ImgContext } from '../context/ImgContext'
 import styled from 'styled-components'
 import AboutCardItem from '../items/AboutCardItem'
+import { useBurger } from '../context/BurgerContext'
 
 
 const AboutContainer = styled.div`
@@ -40,6 +41,13 @@ const AboutPage = ()=>{
   const items = document.querySelectorAll('.aboutImg');
   const html = document.documentElement;
   const [scrollTop, setScrollTop] = useState(0);
+  const {toggleBurger,setToggleBurger} = useBurger();
+
+  useEffect(()=>{
+    if(toggleBurger){
+      setToggleBurger(false);
+    }
+  },[]);
 
 
   useEffect(()=>{

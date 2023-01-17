@@ -1,7 +1,8 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { ImgContext } from '../context/ImgContext'
 import styled from 'styled-components'
 import CollectionCardItem from '../items/CollectionCardItem'
+import { useBurger } from '../context/BurgerContext'
 
 
 const CollectionContainer = styled.div`
@@ -26,17 +27,18 @@ const CollectionCardList = styled.div`
   }
   @media (min-width: 992px) {
     grid-template-columns: repeat(3,minmax(150px,500px));
-    
   }
-  @media (min-width: 1200px) {
-
-  }
-
-
 `
 
 const CollectionPage=()=>{
-  const images = useContext(ImgContext)
+  const images = useContext(ImgContext);
+  const {toggleBurger,setToggleBurger} = useBurger();
+
+  useEffect(()=>{
+    if(toggleBurger){
+      setToggleBurger(false);
+    }
+  },[]);
 
   return(
     <>

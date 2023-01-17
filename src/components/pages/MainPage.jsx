@@ -3,6 +3,7 @@ import { useContext,useEffect,useState } from 'react'
 import { ImgContext } from '../context/ImgContext'
 import MainCardList from '../section/MainCardList'
 import ImgMain from '../ImgMain'
+import { useBurger } from '../context/BurgerContext'
 
 
 const Container = styled.div`
@@ -52,7 +53,14 @@ const ImgContainer = styled.div`
 const MainPage =()=>{
   const images = useContext(ImgContext)
   const imgs = document.querySelectorAll('.mainPng') //取得全部的圖片
-  const [pointMove,setPointMove]=useState()
+  const [pointMove,setPointMove]=useState();
+  const {toggleBurger,setToggleBurger} = useBurger();
+
+  useEffect(()=>{
+    if(toggleBurger){
+      setToggleBurger(false);
+    }
+  },[]);
   
   const handleMouseMove=(e)=>{
     let percentage = e.clientX / window.outerWidth; //螢幕左到右的值
