@@ -3,8 +3,6 @@ import { useContext,useEffect,useState } from 'react'
 import { ImgContext } from '../context/ImgContext'
 import MainCardList from '../section/MainCardList'
 import ImgMain from '../ImgMain'
-import { useBurger } from '../context/BurgerContext'
-
 
 const Container = styled.div`
   display: flex;
@@ -23,7 +21,7 @@ const ImgContainer = styled.div`
   h1{
     position: absolute;
     z-index: 1;
-    color: white;
+    color: var(--color-white);
     top:50%;
     transform: translateY(-50%);
     text-shadow: 3px 3px 3px var(--color-dark80);
@@ -54,14 +52,7 @@ const MainPage =()=>{
   const images = useContext(ImgContext)
   const imgs = document.querySelectorAll('.mainPng') //取得全部的圖片
   const [pointMove,setPointMove]=useState();
-  const {toggleBurger,setToggleBurger} = useBurger();
 
-  useEffect(()=>{
-    if(toggleBurger){
-      setToggleBurger(false);
-    }
-  },[]);
-  
   const handleMouseMove=(e)=>{
     let percentage = e.clientX / window.outerWidth; //螢幕左到右的值
     setPointMove(percentage)

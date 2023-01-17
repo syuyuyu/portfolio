@@ -1,8 +1,7 @@
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import { ImgContext } from '../context/ImgContext'
 import styled from 'styled-components'
 import CollectionCardItem from '../items/CollectionCardItem'
-import { useBurger } from '../context/BurgerContext'
 
 
 const CollectionContainer = styled.div`
@@ -18,12 +17,8 @@ const CollectionCardList = styled.div`
   grid-auto-rows: min-content;
   grid-gap: .2rem;
   
-  @media (min-width: 576px) {
-
-  }
   @media (min-width: 768px) {
     grid-template-columns: repeat(2,minmax(150px,500px));
-    
   }
   @media (min-width: 992px) {
     grid-template-columns: repeat(3,minmax(150px,500px));
@@ -32,13 +27,6 @@ const CollectionCardList = styled.div`
 
 const CollectionPage=()=>{
   const images = useContext(ImgContext);
-  const {toggleBurger,setToggleBurger} = useBurger();
-
-  useEffect(()=>{
-    if(toggleBurger){
-      setToggleBurger(false);
-    }
-  },[]);
 
   return(
     <>

@@ -8,9 +8,8 @@ export const useBurger =()=>useContext(BurgerContext);
 export const BurgerProvider =({children})=>{
   const [toggleBurger,setToggleBurger]= useState(false);
 
-    const onToggleBurger =()=>{
+  const onToggleBurger =()=>{
     setToggleBurger(!toggleBurger)
-
     setTimeout(() => {
     setToggleBurger(false)
     }, 3000);

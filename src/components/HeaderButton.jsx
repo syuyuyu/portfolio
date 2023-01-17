@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { useNavigate } from "react-router-dom";
+import { useBurger } from './context/BurgerContext';
 
 const StyleContainer = styled.div`
   cursor: pointer;
@@ -17,7 +18,6 @@ const StyleContainer = styled.div`
 }
 `
 
-
 const Button = styled.div`
   color: var(--color-white);
   :hover{
@@ -27,14 +27,21 @@ const Button = styled.div`
 
 const HeaderButton = ({name,linkTo}) =>{
   const navigate = useNavigate();
+  const {toggleBurger,setToggleBurger} = useBurger();
+
+
+  const handleClick=()=>{
+      navigate(`${linkTo}`)
+      if(toggleBurger){
+        setToggleBurger(false)
+      }
+  };
 
   return(
     <>
-      <StyleContainer onClick={()=>navigate(`${linkTo}`)}>
+      <StyleContainer onClick={handleClick}>
         <Button>
-          {/* <StyleBackground> */}
             <h5>{name}</h5>
-          {/* </StyleBackground> */}
         </Button>
       </StyleContainer>
     </>

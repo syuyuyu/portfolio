@@ -56,7 +56,7 @@ const Line = styled.div`
   content: '';
   width: 30px;
   height: 3px;
-  background-color: white;
+  background-color: var(--color-white);
   position: relative;
   top: 50%;
   left: 10px;
@@ -70,7 +70,7 @@ const Line = styled.div`
     height: 3px;
     top: 20px;
     left: 0;
-    background-color: white;
+    background-color: var(--color-white);
     transform: translateY(-30px);
   }
   ::after{
@@ -80,7 +80,7 @@ const Line = styled.div`
     height: 3px;
     top: 40px;
     left: 0;
-    background-color: white;
+    background-color: var(--color-white);
     transform: translateY(-30px);
   }
 `
@@ -100,9 +100,9 @@ const Header =()=>{
       </Burger>
       {toggleBurger &&
         <BurgerButton>
-          <HeaderButton name='首頁' linkTo='/main' />
-          <HeaderButton name='作品' linkTo='/collection' />
-          <HeaderButton name='關於' linkTo='/about' />
+          <HeaderButton name='首頁' linkTo='/main'/>
+          <HeaderButton name='作品' linkTo='/collection'/>
+          <HeaderButton name='關於' linkTo='/about'/>
         </BurgerButton>
       }
       <ButtonContainer>
