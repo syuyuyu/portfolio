@@ -15,9 +15,9 @@
 ### 作品頁面
 
 - Grid 的 RWD。  
-  <img src="https://github.com/syuyuyu/portfolio/blob/main/public/readme-img/messageImage_1675334278987.jpg?raw=true" data-canonical-src="https://github.com/syuyuyu/portfolio/blob/main/public/readme-img/messageImage_1675334278987.jpg?raw=true" width="400"/>
-  <img src="https://github.com/syuyuyu/portfolio/blob/main/public/readme-img/messageImage_1675334291908.jpg?raw=true" data-canonical-src="https://github.com/syuyuyu/portfolio/blob/main/public/readme-img/messageImage_1675334291908.jpg?raw=true" width="300"/>
-  <img src="https://github.com/syuyuyu/portfolio/blob/main/public/readme-img/messageImage_1675334298669.jpg?raw=true" data-canonical-src="https://github.com/syuyuyu/portfolio/blob/main/public/readme-img/messageImage_1675334298669.jpg?raw=true" width="200"/>
+  <img src="https://github.com/syuyuyu/portfolio/blob/main/public/readme-img/messageImage_1675334278987.jpg?raw=true" data-canonical-src="https://github.com/syuyuyu/portfolio/blob/main/public/readme-img/messageImage_1675334278987.jpg?raw=true" width="ˇ350"/>
+  <img src="https://github.com/syuyuyu/portfolio/blob/main/public/readme-img/messageImage_1675334291908.jpg?raw=true" data-canonical-src="https://github.com/syuyuyu/portfolio/blob/main/public/readme-img/messageImage_1675334291908.jpg?raw=true" width="250"/>
+  <img src="https://github.com/syuyuyu/portfolio/blob/main/public/readme-img/messageImage_1675334298669.jpg?raw=true" data-canonical-src="https://github.com/syuyuyu/portfolio/blob/main/public/readme-img/messageImage_1675334298669.jpg?raw=true" width="180"/>
 
 ### 關於頁面
 
