@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 
 const StyleWindow = styled.div`
-  width: 100vw;
   height: 100%;
   margin: 0px auto;
   min-width: 330px;

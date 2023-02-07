@@ -13,19 +13,19 @@ function App() {
     <div className="App">
       <ResetStyle />
       <GlobalStyle />
-            <BurgerProvider>
-      <Header />
-      <LayoutMain>
-          <ImgContext.Provider value={Images}>
-              <Routes>
-                <Route path='*' element={<MainPage />} />
-                <Route path='main' element={<MainPage />} />
-                <Route path='collection' element={<CollectionPage />} />
-                <Route path='about' element={<AboutPage />} />
-              </Routes>
-          </ImgContext.Provider>
-      </LayoutMain>
-            </BurgerProvider>
+        <BurgerProvider>
+          <Header />
+          <LayoutMain>
+            <ImgContext.Provider value={Images}>
+                <Routes>
+                  <Route path='*' element={<MainPage />} />
+                  <Route path='main' element={<MainPage />} />
+                  <Route path='collection' element={<CollectionPage />} />
+                  <Route path='about' element={<AboutPage />} />
+                </Routes>
+            </ImgContext.Provider>
+          </LayoutMain>
+        </BurgerProvider>
     </div>
   );
 }

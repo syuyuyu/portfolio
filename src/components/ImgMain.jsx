@@ -10,6 +10,7 @@ const Img =styled.img`
   position: relative;
   top: 0;
   left: 0;
+  z-index: -1;
   @media (min-width: 768px) {
     height: 500px;
   }

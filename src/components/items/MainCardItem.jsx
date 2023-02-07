@@ -7,8 +7,7 @@ const CardItemContainer = styled.div`
   height: 200px;
   border-radius: 5px;
   position:relative;
-
-
+  cursor: pointer;
   :hover .backgroundCover{
   visibility: hidden;
   opacity: 0;

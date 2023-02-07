@@ -3,6 +3,7 @@ import { useContext,useEffect,useState } from 'react'
 import { ImgContext } from '../context/ImgContext'
 import MainCardList from '../section/MainCardList'
 import ImgMain from '../ImgMain'
+import Modal from '../modals/Modal'
 
 const Container = styled.div`
   display: flex;
@@ -20,7 +21,7 @@ const ImgContainer = styled.div`
   position: relative;
   h1{
     position: absolute;
-    z-index: 1;
+    /* z-index: 1; */
     color: var(--color-white);
     top:50%;
     transform: translateY(-50%);
@@ -82,6 +83,7 @@ const MainPage =()=>{
         <ImgMain url={images.main03} name='mainPng'></ImgMain>
       </ImgContainer>
       <MainCardList />
+      <Modal />
     </Container>
     </>
   )
