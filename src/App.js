@@ -7,6 +7,7 @@ import CollectionPage from './components/pages/CollectionPage'
 import AboutPage from './components/pages/AboutPage'
 import {ImgContext,Images} from './components/context/ImgContext';
 import { BurgerProvider } from "./components/context/BurgerContext";
+import { ModalProvider } from "./components/context/ModalContext";
 
 function App() {
   return (
@@ -14,17 +15,19 @@ function App() {
       <ResetStyle />
       <GlobalStyle />
         <BurgerProvider>
+          <ModalProvider>
           <Header />
-          <LayoutMain>
-            <ImgContext.Provider value={Images}>
-                <Routes>
-                  <Route path='*' element={<MainPage />} />
-                  <Route path='main' element={<MainPage />} />
-                  <Route path='collection' element={<CollectionPage />} />
-                  <Route path='about' element={<AboutPage />} />
-                </Routes>
-            </ImgContext.Provider>
-          </LayoutMain>
+            <LayoutMain>
+              <ImgContext.Provider value={Images}>
+                  <Routes>
+                    <Route path='*' element={<MainPage />} />
+                    <Route path='main' element={<MainPage />} />
+                    <Route path='collection' element={<CollectionPage />} />
+                    <Route path='about' element={<AboutPage />} />
+                  </Routes>
+              </ImgContext.Provider>
+            </LayoutMain>
+          </ModalProvider>
         </BurgerProvider>
     </div>
   );

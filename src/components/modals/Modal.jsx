@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Images } from "../context/ImgContext";
+import { useModal } from "../context/ModalContext";
 import ImgItem from "../items/ImgItem";
 
 
@@ -108,19 +109,16 @@ const Wrap =styled.div`
   `
 
 const Modal = ()=>{
-
-  const ToggleModal=()=>{
-
-  }
+  const {toggleModal,HandleToggleModal} = useModal();
 
    return (
     <>
-      {/* {modal && ( */}
+      {toggleModal && (
         <ModalContainer>
-          <Overlay onClick={ToggleModal}></Overlay>
+          <Overlay onClick={HandleToggleModal}></Overlay>
           <Wrap>
             <Container>
-              <Close onClick={ToggleModal}>關閉</Close>
+              <Close onClick={HandleToggleModal}>關閉</Close>
               <Row className="row-img">
                 <ImgItem url={Images.illustration}></ImgItem>
               </Row>
@@ -135,7 +133,7 @@ const Modal = ()=>{
           </Wrap>
 
         </ModalContainer>
-      {/* )} */}
+      )}
     </>
   );
 }

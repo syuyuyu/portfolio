@@ -1,5 +1,6 @@
 import ImgItem from "./ImgItem";
 import styled from "styled-components";
+import { useModal } from "../context/ModalContext";
 
 
 const CardItemContainer = styled.div`
@@ -37,10 +38,12 @@ const BackgroundCover = styled.div`
 
 
 const MainCardItem = ({url,type})=>{
+  const {HandleToggleModal} = useModal();
+
 
   return (
     <>
-      <CardItemContainer>
+      <CardItemContainer onClick={HandleToggleModal}>
         <BackgroundCover className='backgroundCover'><h4>{type}</h4></BackgroundCover>
         <ImgItem url={url}></ImgItem>
       </CardItemContainer>
