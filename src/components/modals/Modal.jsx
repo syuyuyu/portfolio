@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Images } from "../context/ImgContext";
 import { useModal } from "../context/ModalContext";
 import ImgItem from "../items/ImgItem";
 
@@ -85,6 +84,7 @@ const Wrap =styled.div`
     align-items: center;
     @media (min-width: 992px) {
       align-items: start;
+      margin-left: 2rem;
     }
     &.row-img{
       margin: 0px auto;
@@ -109,7 +109,7 @@ const Wrap =styled.div`
   `
 
 const Modal = ()=>{
-  const {toggleModal,HandleToggleModal} = useModal();
+  const {toggleModal,HandleToggleModal,title,tool,content,type} = useModal();
 
    return (
     <>
@@ -120,15 +120,15 @@ const Modal = ()=>{
             <Container>
               <Close onClick={HandleToggleModal}>關閉</Close>
               <Row className="row-img">
-                <ImgItem url={Images.illustration}></ImgItem>
+                <ImgItem urlName={type}></ImgItem>
               </Row>
               <Row>
-                  <h2 style={{padding:' 5px 0'}}>標題標題</h2>
-                  <p style={{paddingTop:' 5px 0'}}>工具工具工具工具工具</p>
+                <h2 style={{padding:' 5px 0'}}>{title}</h2>
+                <p style={{marginTop:' 15px'}}>{tool}</p>
               </Row>
             </Container>
             <Row className='row-content' style={{marginTop:'15px',padding:' 15px'}}>
-              介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文介紹文
+              {content}
             </Row>
           </Wrap>
 

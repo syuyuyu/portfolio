@@ -37,13 +37,12 @@ const BackgroundCover = styled.div`
 `
 
 
-const MainCardItem = ({url,type})=>{
+const MainCardItem = ({url,type,typeName})=>{
   const {HandleToggleModal} = useModal();
-
 
   return (
     <>
-      <CardItemContainer onClick={HandleToggleModal}>
+      <CardItemContainer onClick={()=>HandleToggleModal(typeName)}>
         <BackgroundCover className='backgroundCover'><h4>{type}</h4></BackgroundCover>
         <ImgItem url={url}></ImgItem>
       </CardItemContainer>

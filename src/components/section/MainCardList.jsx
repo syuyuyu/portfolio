@@ -29,10 +29,10 @@ const MainCardList = ()=>{
     <>
       <CardContainer>
         <CardList>
-          <MainCardItem url={images.illustration} type='插 畫'/>
-          <MainCardItem url={images.watercolor} type='水 彩'/>
-          <MainCardItem url={images.digitizer} type='電 繪'/>
-          <MainCardItem url={images.stickers} type='貼 圖'/>
+          <MainCardItem url={images.illustration} type='插 畫' typeName='illustration'/>
+          <MainCardItem url={images.watercolor} type='水 彩' typeName='watercolor'/>
+          <MainCardItem url={images.digitizer} type='電 繪' typeName='digitizer'/>
+          <MainCardItem url={images.stickers} type='貼 圖' typeName='stickers'/>
         </CardList>
       </CardContainer>
     </>
