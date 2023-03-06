@@ -5,32 +5,40 @@ import MainCardList from '../section/MainCardList'
 import ImgMain from '../ImgMain'
 import Modal from '../modals/Modal'
 
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 .5rem;
   height: 100%;
   `
 const ImgContainer = styled.div`
   width: 100%;
-  height: auto;
-  margin: 1rem 0 .3rem 0;
+  margin: 3rem 0 0 0;
+  padding-bottom:3rem;
   max-height: 500px;
   display: flex;
   justify-content: center;
   position: relative;
+  max-width: 100vw;
+  @media (min-width: 576px) {
+    margin: 3rem 0 0 0;
+    max-height: 100vh;
+  }
+  @media (min-width: 768px) {
+    margin: 5rem 0 0 0;
+  }
   h1{
     position: absolute;
-    /* z-index: 1; */
     color: var(--color-white);
     top:50%;
     transform: translateY(-50%);
     text-shadow: 3px 3px 3px var(--color-dark80);
     @media (min-width: 992px) {
+      top:0%;
       transform: translateY(300%);
     }
   }
- 
+
   .main{
     display: block;
   }
@@ -38,7 +46,7 @@ const ImgContainer = styled.div`
     display: none;
   }
   @media (min-width: 992px) {
-    margin-bottom:510px ;
+    height: 600px;
     .main{
       display: none;
     }
@@ -53,7 +61,9 @@ const MainPage =()=>{
   const images = useContext(ImgContext)
   const imgs = document.querySelectorAll('.mainPng') //取得全部的圖片
   const [pointMove,setPointMove]=useState();
+  const items = document.querySelectorAll('.main-item'); //Y軸滾動
 
+  //圖片模糊 - 游標左右移動效果
   const handleMouseMove=(e)=>{
     let percentage = e.clientX / window.outerWidth; //螢幕左到右的值
     setPointMove(percentage)
@@ -70,6 +80,26 @@ const MainPage =()=>{
   useEffect(()=>{
     setPointMove(0)
   },[pointMove])
+
+
+//Y軸滾動 item滑入滑出效果
+  useEffect(()=>{
+    const handleScrollY =()=>{
+      let triggerBottom = window.innerHeight*0.8
+      
+      items.forEach(item=>{
+        const itemTop =  item.getBoundingClientRect().top
+
+        if(itemTop < triggerBottom){
+          item.classList.add('show')
+        }else{
+          item.classList.remove('show')
+        }
+      })
+  }
+  window.addEventListener('scroll', handleScrollY);
+},[items])
+
 
 
   return(

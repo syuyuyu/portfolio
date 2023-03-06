@@ -9,6 +9,22 @@ const CardItemContainer = styled.div`
   border-radius: 5px;
   position:relative;
   cursor: pointer;
+  transform: translateX(-110%);
+  transition: transform 0.7s ease; //item滑動特效
+
+  &:nth-of-type(even){
+    transform: translateX(110%);
+  }
+  &:nth-child(1){
+    transform: translateX(0);
+  }
+  &:nth-child(2){
+    transform: translateX(0);
+  }
+  &.show{
+    transform: translateX(0);
+  }
+  
   :hover .backgroundCover{
   visibility: hidden;
   opacity: 0;
@@ -37,12 +53,12 @@ const BackgroundCover = styled.div`
 `
 
 
-const MainCardItem = ({url,type,typeName})=>{
+const MainCardItem = ({url,type,typeName,claName})=>{
   const {HandleToggleModal} = useModal();
 
   return (
     <>
-      <CardItemContainer onClick={()=>HandleToggleModal(typeName)}>
+      <CardItemContainer className={claName} onClick={()=>HandleToggleModal(typeName)}>
         <BackgroundCover className='backgroundCover'><h4>{type}</h4></BackgroundCover>
         <ImgItem url={url}></ImgItem>
       </CardItemContainer>

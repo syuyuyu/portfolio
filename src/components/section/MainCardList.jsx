@@ -8,6 +8,7 @@ const CardContainer = styled.div`
   height: auto;
   display: flex;
   justify-content: center;
+  overflow-x: hidden; //將超出的main-item隱藏
 `
 const CardList = styled.div`
   margin: 5px;
@@ -23,16 +24,20 @@ const CardList = styled.div`
 
 
 const MainCardList = ()=>{
-  const images = useContext(ImgContext)
+  const images = useContext(ImgContext);
 
   return(
     <>
       <CardContainer>
         <CardList>
-          <MainCardItem url={images.illustration} type='插 畫' typeName='illustration'/>
-          <MainCardItem url={images.watercolor} type='水 彩' typeName='watercolor'/>
-          <MainCardItem url={images.digitizer} type='電 繪' typeName='digitizer'/>
-          <MainCardItem url={images.stickers} type='貼 圖' typeName='stickers'/>
+          <MainCardItem url={images.illustration} type='插 畫' typeName='illustration' claName='main-item'/>
+          <MainCardItem url={images.watercolor} type='水 彩' typeName='watercolor' claName='main-item'/>
+          <MainCardItem url={images.digitizer} type='電 繪' typeName='digitizer' claName='main-item'/>
+          <MainCardItem url={images.stickers} type='貼 圖' typeName='stickers' claName='main-item'/>
+          <MainCardItem url={images.illustration} type='插 畫' typeName='illustration' claName='main-item'/>
+          <MainCardItem url={images.watercolor} type='水 彩' typeName='watercolor' claName='main-item'/>
+          <MainCardItem url={images.digitizer} type='電 繪' typeName='digitizer' claName='main-item'/>
+          <MainCardItem url={images.stickers} type='貼 圖' typeName='stickers' claName='main-item'/>
         </CardList>
       </CardContainer>
     </>

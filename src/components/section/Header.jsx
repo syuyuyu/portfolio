@@ -4,8 +4,8 @@ import HeaderIcon from "../HeaderIcon";
 import { useBurger } from "../context/BurgerContext";
 
 const StyleHeader =styled.div`
-  /* height: 50px; */
-  width: 100vw;
+  height: 50px;
+  width: 100%;
   min-width: 330px;
   min-height: 50px;
   padding-right: 10px;
