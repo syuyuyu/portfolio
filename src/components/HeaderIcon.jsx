@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Swal from 'sweetalert2'
 
 const StyleContainer = styled.div`
   height: 30px;
@@ -23,6 +24,21 @@ const StyleContainer = styled.div`
 `
 
 const HeaderIcon = ({svg})=>{
-  return <StyleContainer style={{backgroundImage:`var(${svg})`}}></StyleContainer>
+
+  const handleClick=(svg)=>{
+
+    if(svg.includes('line')){
+      Swal.fire(
+        'Line ID :',
+        'syuyuyu',
+        'success'
+)
+    }else{
+      window.open('https://www.instagram.com/yuyuu1992/')
+    }
+
+  }
+
+  return <StyleContainer style={{backgroundImage:`var(${svg})`}} onClick={()=>handleClick(svg)}></StyleContainer>
 }
 export default HeaderIcon;
