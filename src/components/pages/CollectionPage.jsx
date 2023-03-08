@@ -8,20 +8,26 @@ const CollectionContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 0 2rem;
 `
 const CollectionCardList = styled.div`
   margin: 1rem 0;
-  display:grid;
-  grid-template-columns: repeat(auto-fit,minmax(150px,500px));
-  grid-auto-rows: min-content;
-  grid-gap: .2rem;
+  height: 100%;
+  column-count: 1;
+  column-gap:10px;
+  overflow: hidden;
   
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(2,minmax(150px,500px));
+  
+  @media (min-width: 576px) {
+    width: 110%;
+    column-count: 3;
   }
+  /* @media (min-width: 768px) {
+    column-count: 3;
+  } */
   @media (min-width: 992px) {
-    grid-template-columns: repeat(3,minmax(150px,500px));
+    column-count: 5;
   }
 `
 
@@ -32,6 +38,17 @@ const CollectionPage=()=>{
     <>
     <CollectionContainer>
       <CollectionCardList>
+          <CollectionCardItem url={images.collection01}/>
+          <CollectionCardItem url={images.collection02}/>
+          <CollectionCardItem url={images.collection03}/>
+          <CollectionCardItem url={images.collection04}/>
+          <CollectionCardItem url={images.collection05}/>
+          <CollectionCardItem url={images.collection06}/>
+          <CollectionCardItem url={images.collection07}/>
+          <CollectionCardItem url={images.collection08}/>
+          <CollectionCardItem url={images.collection09}/>
+          <CollectionCardItem url={images.collection10}/>
+
           <CollectionCardItem url={images.collection01}/>
           <CollectionCardItem url={images.collection02}/>
           <CollectionCardItem url={images.collection03}/>

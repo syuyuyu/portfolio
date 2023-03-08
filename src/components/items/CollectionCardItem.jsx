@@ -2,17 +2,13 @@ import styled from "styled-components";
 import ImgItem from "./ImgItem";
 
 const CardItemContainer = styled.div`
-  border: 1px solid grey;
-  height: 260px;
-  border-radius: 5px;
-  /* margin: 3px 0; */
-  
-  @media (min-width: 768px) {
-    min-height: 370px;
-  }
+  width: 100%;
+  height: 100%;
+  margin-bottom: 5px;
+  min-width: 100%;
 `
 
-const Info =styled.div``
+// const Info =styled.div``
 
 
 const CollectionCardItem = ({url})=>{
@@ -21,7 +17,7 @@ const CollectionCardItem = ({url})=>{
     <>
     <CardItemContainer>
       <ImgItem url={url}></ImgItem>
-      <Info></Info>
+      {/* <Info></Info> */}
     </CardItemContainer>
     </>
   )
