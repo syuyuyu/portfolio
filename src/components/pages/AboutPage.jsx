@@ -5,17 +5,19 @@ import AboutCardItem from '../items/AboutCardItem'
 
 
 const AboutContainer = styled.div`
-  padding: 0 2rem;
+  padding: 0 2rem 3rem 2rem;
   margin: 0 auto;
   width: 100%;
-  min-height: 100%;
+  height: 120%;
+
 `
 const AboutCardList = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 15px auto 5px auto;
+  margin: 15px auto 15px auto;
   min-width: 200px;
+  height: 100%;
 `
 const AboutContent = styled.div`
   height: 350px;
@@ -52,7 +54,7 @@ const AboutPage = ()=>{
           let start = total * index
           let end = total * (index + 1)        
           let progress = (scrolled - start) / (end - start)
-          if (progress >= 1) progress = 1
+          if (progress >= 0.85) progress = 1
           if (progress <= 0.5) progress = 0
           item.style.setProperty('--progress', progress)
         }
