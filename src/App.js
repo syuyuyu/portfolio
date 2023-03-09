@@ -14,7 +14,7 @@ const basename = process.env.PUBLIC_URL;
 function App() {
   return (
     <div className="App">
-      <BrowserRouter  basename={basename}>
+      {/* <BrowserRouter basename={basename}> */}
       <ResetStyle />
       <GlobalStyle />
         <BurgerProvider>
@@ -22,7 +22,7 @@ function App() {
           <Header />
             <LayoutMain>
               <ImgContext.Provider value={Images}>
-                  <Routes>
+                  <Routes  basename={basename}>
                     <Route path='*' element={<MainPage />} />
                     <Route path='main' element={<MainPage />} />
                     <Route path='collection' element={<CollectionPage />} />
@@ -32,7 +32,7 @@ function App() {
             </LayoutMain>
           </ModalProvider>
         </BurgerProvider>
-      </BrowserRouter>
+      {/* </BrowserRouter> */}
     </div>
   );
 }
