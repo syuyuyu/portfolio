@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ResetStyle,GlobalStyle } from './components/common/globalStyle';
 import LayoutMain from './components/layout/LayoutMain';
 import Header from './components/section/Header';
@@ -9,9 +9,12 @@ import {ImgContext,Images} from './components/context/ImgContext';
 import { BurgerProvider } from "./components/context/BurgerContext";
 import { ModalProvider } from "./components/context/ModalContext";
 
+const basename = process.env.PUBLIC_URL;
+
 function App() {
   return (
     <div className="App">
+      <BrowserRouter  basename={basename}>
       <ResetStyle />
       <GlobalStyle />
         <BurgerProvider>
@@ -29,6 +32,7 @@ function App() {
             </LayoutMain>
           </ModalProvider>
         </BurgerProvider>
+      </BrowserRouter>
     </div>
   );
 }
