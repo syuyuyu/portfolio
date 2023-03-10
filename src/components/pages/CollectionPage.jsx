@@ -10,6 +10,7 @@ const CollectionContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 0 2rem;
+  position: relative;
 `
 const CollectionCardList = styled.div`
   margin: 1rem 0;
@@ -17,7 +18,7 @@ const CollectionCardList = styled.div`
   column-count: 1;
   column-gap:10px;
   overflow: hidden;
-  
+  padding: 20px;
   
   @media (min-width: 576px) {
     width: 110%;
